@@ -153,7 +153,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
         'rest_framework.permissions.IsAuthenticated',
-        'rest-framework.permissions.IsAdminUser',
+#         'rest-framework.permissions.IsAdminUser',
         # 'rest_framework.renderers.JSONRenderer',
         # 'rest_framework.permissions.DjangoModelPermissions',
         # 'rest_framework.renderers.BrowsableAPIRenderer',
@@ -164,7 +164,7 @@ REST_FRAMEWORK = {
       'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
-        'rest-framework.authentication.SessionAuthentication',
+#         'rest-framework.authentication.SessionAuthentication',
        
       ),
     
