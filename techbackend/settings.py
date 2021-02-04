@@ -96,7 +96,7 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -153,7 +153,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
         'rest_framework.permissions.IsAuthenticated',
-        # 'rest-framework.permissions.IsAdminUser',
+        'rest-framework.permissions.IsAdminUser',
         # 'rest_framework.renderers.JSONRenderer',
         # 'rest_framework.permissions.DjangoModelPermissions',
         # 'rest_framework.renderers.BrowsableAPIRenderer',
@@ -164,7 +164,7 @@ REST_FRAMEWORK = {
       'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
-        # 'rest-framework.authentication.SessionAuthentication',
+        'rest-framework.authentication.SessionAuthentication',
        
       ),
     
@@ -176,3 +176,4 @@ CORS_ORIGIN_ALLOW_ALL =  True
 
 USE_ETAGS = True
 
+x_Frame_options='SAMEORIGIN'
