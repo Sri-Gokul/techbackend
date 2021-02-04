@@ -4,6 +4,7 @@ from django.contrib.auth.models import Group,User
 from .models import *
 
 admin.site.register(Product)
+admin.site.register(Yuviproduct)
 admin.site.unregister(Group)
 admin.site.unregister(User)
 #admin.site.unregister(Theme)
