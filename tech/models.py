@@ -10,7 +10,7 @@ class Product(models.Model):
     oldcost=models.CharField(max_length=120)
     newcost=models.CharField(max_length=120)
     discount=models.CharField(max_length=120)
-    like=models.IntegerField(max_length=120)
+    like=models.IntegerField()
  
     def __str__(self):
         return self.name
@@ -22,7 +22,7 @@ class Yuviproduct(models.Model):
     description=models.CharField(max_length=120)
     oldcost=models.CharField(max_length=120)
     newcost=models.CharField(max_length=120)
-    like=models.IntegerField(max_length=120)
+    like=models.IntegerField()
  
     def __str__(self):
         return self.name
