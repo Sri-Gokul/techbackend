@@ -14,8 +14,17 @@ class ProductListView(generics.ListAPIView):
      permission_classes=[permissions.AllowAny,]
      authentication_classes=[authentication.TokenAuthentication]
 
+
+
 class ProductDetialView(generics.RetrieveAPIView):
      queryset = Product.objects.all()
+     serializer_class = ProductSerializer
+
+     permission_classes=[permissions.AllowAny,]
+     authentication_classes=[authentication.TokenAuthentication]
+
+class ProductUpdate(generics.RetrieveUpdateDestroyAPIView):
+     queryset = Product
      serializer_class = ProductSerializer
 
      permission_classes=[permissions.AllowAny,]
@@ -30,6 +39,13 @@ class YuviproductListView(generics.ListAPIView):
 
 class YuviproductDetialView(generics.RetrieveAPIView):
      queryset = Yuviproduct.objects.all()
+     serializer_class = YuviproductSerializer
+
+     permission_classes=[permissions.AllowAny,]
+     authentication_classes=[authentication.TokenAuthentication]
+
+class YuviproductUpdate(generics.RetrieveUpdateDestroyAPIView):
+     queryset = Yuviproduct
      serializer_class = YuviproductSerializer
 
      permission_classes=[permissions.AllowAny,]
